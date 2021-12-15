@@ -1,0 +1,130 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+
+body, a, p, h1, h2, h3, h4, span, li, ul, button, input, form, div{ font-family: 'Pretendard';}
+a { text-decoration:none; color:inherit;}
+
+/* SASS 기본 */
+$orange: #FF5203;
+$black: rgb(19, 19, 19);
+$border8: 8px solid #000;
+$border2: 2px solid #000;
+
+/* 기본 스타일 */
+body {
+    background-color: $orange;
+}
+
+/* header */
+header {
+    display: flex;
+    flex-direction: row;
+}
+
+.header-item {
+    position: relative;
+    width: 410px;
+    text-align: right;
+    word-break: keep-all;
+    padding: 100px 28px;
+    background-color: $black;
+    color: rgba(255, 255, 255, 0.8);
+    border-bottom: $border8;
+    border-right: $border2;
+    #header-msg {
+        font-family: 'Dela Gothic One';
+        font-size: 5em;
+    }
+    .circle {
+        bottom: 40px;
+        left: 25px;
+        position: absolute;
+        width: 110px;
+        height: 240px;
+        border: 2px solid #fff;
+        border-radius: 100%;
+        &:nth-child(2) {left: 50px;}
+        &:nth-child(3) {left: 120px;}
+    }
+}
+.content {
+    width: 1200px;
+    height: 440px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: 450px;
+    border-bottom: $border8;
+    box-sizing: border-box;
+    background-image: url(../img/myphoto.png);
+    background-size: 470px;
+    background-position: top 10px right;
+}
+.content .txt-container {
+    margin-top: 200px;
+    h1 {
+        margin-right: -3px;
+        font-size: 4.3em;
+        display: inline;
+        text-align: center;
+        color: #fff;
+        animation: h1font 3.5s ease-out infinite both;
+        &:nth-child(1){animation-delay: .0s;}
+        &:nth-child(2){animation-delay: .1s;}
+        &:nth-child(3){animation-delay: .2s;}
+        &:nth-child(4){animation-delay: .3s;}
+        &:nth-child(5){animation-delay: .4s;}
+        &:nth-child(6){animation-delay: .5s;}
+        &:nth-child(7){animation-delay: .6s;}
+        &:nth-child(8){animation-delay: .7s;}
+        &:nth-child(9){animation-delay: .8s;}
+        &:nth-child(10){animation-delay: .9s;}
+        &:nth-child(11){animation-delay: 1s;}
+        &:nth-child(12){animation-delay: 1.1s;}
+        &:nth-child(13){animation-delay: 1.2s;}
+        &:nth-child(14){animation-delay: 1.3s;}
+        &:nth-child(15){animation-delay: 1.4s;}
+        &:nth-child(16){animation-delay: 1.5s;}
+        &:nth-child(17){animation-delay: 1.6s;}
+        &:nth-child(18){animation-delay: 1.7s;}
+        &:nth-child(19){animation-delay: 1.8s;}
+        &:nth-child(20){animation-delay: 1.9s;}
+        &:nth-child(21){animation-delay: 2s;}
+        &:nth-child(22){animation-delay: 2.1s;}
+        &:nth-child(23){animation-delay: 2.2s;}
+        &:nth-child(24){animation-delay: 2.3s;}
+    }
+}
+@keyframes h1font {
+	0% {font-weight: 100;}
+	50% {font-weight: 900;}
+	100% {font-weight: 100;}
+}
+
+/* menu */
+nav {
+    width: 550px;
+    height: 440px;
+    .menu {
+        display: flex;
+        flex-direction: column;
+        height: 440px;
+        border-left: $border8;
+        .tit-menu {
+            flex: 1;
+            padding-left: 29px;
+            border-bottom: $border8;
+            font-size: 3.6em;
+            font-weight: 500;
+            line-height: 100px;
+            a {display: block;}
+            &:hover {
+                background-color: $black;
+                color: $orange;
+            }
+        }
+        .sub-menu {
+            display: none;
+        }
+    }
+}
+
