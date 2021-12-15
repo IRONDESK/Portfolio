@@ -1,0 +1,135 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+body, a, p, h1, h2, h3, h4, span, li, ul, button, input, form, div{ font-family: 'Pretendard';}
+a { text-decoration:none; color:inherit;}
+
+body {
+    width: 80vw;
+    margin: 0 auto;
+}
+header {
+    height: 60px;
+}
+header::before{
+    width: 360px;
+    height: 480px;
+    margin-top: 15px;
+    content: '';
+    position: absolute;
+    background-image: url(img/myphoto.gif);
+    background-size: 290px;
+    background-repeat: no-repeat;
+}
+
+section {
+    width: 100%;
+    height: 535px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+footer {
+    background-color: khaki;
+    width: 100%;
+    height: 130px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* nav */
+nav {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+nav .nav-logo, nav .nav-icon{
+    position: relative;
+}
+nav .nav-logo{
+    float: left;
+    width: 350px;
+}
+
+/* nav- menu */
+nav .nav-menu{
+    text-align: center;
+    font-size: 1.1em;
+    line-height: 1.8em;
+}
+nav .nav-menu .menu{
+    display: flex;
+    justify-content: space-between;
+}
+nav .nav-menu .menu li{
+    width: 120px;
+}
+nav .nav-menu .menu:hover a{
+    color: #999;
+}
+nav .nav-menu .menu .topmenu:hover > a{
+    color: #000;
+    font-weight: bold;
+}
+
+/* nav- menu- submenu */
+nav .nav-menu .submenu{
+    display: none;
+    position: relative;
+    left: -60px;
+}
+nav .nav-menu .menu .topmenu:nth-child(3):hover .submenu{
+    display: flex;
+    justify-content: space-between;
+}
+nav .nav-menu .submenu li{
+    font-size: 0.8em;
+    padding: 0 7px;
+}
+nav .nav-menu .submenu li a:hover{
+    color: #000;
+    border-bottom: 1px solid black;
+}
+
+
+/* nav- icon */
+nav .nav-icon{
+    float: right;
+    width: 140px;
+    text-align: right;
+}
+nav .nav-icon i{
+    font-size: 1.9em;
+}
+
+/* main- header section */
+main .header-section .header-article{
+    padding-left: 43%;
+    padding-top: 100px;
+}
+main .header-section .header-article:first-child h1{
+    display: inline;
+    font-size: 4.7em;
+    font-weight: 100;
+    animation: h1font 2.5s ease-out infinite both;
+}
+main .header-section .header-article:first-child h2{
+    display: inline;
+    font-size: 4.7em;
+}
+main .header-section .header-article:first-child h3{
+    font-size: 2.5em;
+}
+main .header-section .header-article:first-child h4{
+    font-size: 3.3em;
+}
+@keyframes h1font {
+	0% {
+		font-weight: 45;
+	}
+	50% {
+		font-weight: 930;
+	}
+	100% {
+		font-weight: 45;
+	}
+}
