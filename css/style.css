@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 @import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@100&display=swap");
 body, a, p, h1, h2, h3, h4, span, li, ul, button, input, form, div {
   font-family: 'Pretendard';
 }
@@ -29,8 +30,6 @@ header {
 
 .header-item {
   position: relative;
-  width: 410px;
-  text-align: right;
   word-break: keep-all;
   padding: 100px 28px;
   background-color: #131313;
@@ -40,8 +39,11 @@ header {
 }
 
 .header-item #header-msg {
+  display: block;
   font-family: 'Dela Gothic One';
+  width: 350px;
   font-size: 5em;
+  text-align: right;
 }
 
 .header-item .circle {
@@ -63,8 +65,8 @@ header {
 }
 
 .content {
-  width: 1200px;
-  height: 440px;
+  width: 70%;
+  height: 400px;
   text-align: center;
   background-repeat: no-repeat;
   background-size: 450px;
@@ -74,6 +76,28 @@ header {
   background-image: url(../img/myphoto.png);
   background-size: 470px;
   background-position: top 10px right;
+}
+
+.content #myname {
+  display: block;
+  position: absolute;
+  margin-top: 90px;
+  margin-left: 120px;
+  font-size: 7em;
+  font-weight: 900;
+  z-index: -1;
+  font-family: 'Archivo';
+}
+
+.content #myname span {
+  position: relative;
+  margin-left: -140px;
+  top: 55px;
+  font-family: 'Archivo';
+}
+
+.content #myname span span {
+  margin-left: -300px;
 }
 
 .content .txt-container {
@@ -213,31 +237,37 @@ header {
 @-webkit-keyframes h1font {
   0% {
     font-weight: 100;
+    opacity: 70%;
   }
   50% {
     font-weight: 900;
+    opacity: 100%;
   }
   100% {
     font-weight: 100;
+    opacity: 10%;
   }
 }
 
 @keyframes h1font {
   0% {
     font-weight: 100;
+    opacity: 70%;
   }
   50% {
     font-weight: 900;
+    opacity: 100%;
   }
   100% {
     font-weight: 100;
+    opacity: 10%;
   }
 }
 
 /* menu */
 nav {
-  width: 550px;
-  height: 440px;
+  width: 25%;
+  height: 400px;
 }
 
 nav .menu {
@@ -248,7 +278,7 @@ nav .menu {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 440px;
+  height: 400px;
   border-left: 8px solid #000;
 }
 
@@ -258,9 +288,9 @@ nav .menu .tit-menu {
           flex: 1;
   padding-left: 29px;
   border-bottom: 8px solid #000;
-  font-size: 3.6em;
+  font-size: 3.3em;
   font-weight: 500;
-  line-height: 100px;
+  line-height: 90px;
 }
 
 nav .menu .tit-menu a {
@@ -268,7 +298,7 @@ nav .menu .tit-menu a {
 }
 
 nav .menu .tit-menu:hover {
-  background-color: #131313;
+  background-color: #000;
   color: #FF5203;
 }
 
