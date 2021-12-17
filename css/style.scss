@@ -188,7 +188,7 @@ header {
 
 main {
     display: flex;
-    height: 100vh;
+    height: 100%;
 }
 .sub-cont {
     &:nth-child(1) {
@@ -388,6 +388,15 @@ main .content-1 {
             }
         }
     }
+    /* main */
+    .circle-cont, main .sub-cont  {
+        display: none;
+    }
+    main .content-1 {
+        width: 100vw;
+        border-right: $border8;
+        border-left: $border8;
+    }
 }
 @media screen and (max-width: 640px) {
     .cont-content {
@@ -407,23 +416,23 @@ main .content-1 {
         background-size: 300px;
         background-position: top 10px right -40px;
         #myname {
-            margin-top: 42px;
+            margin-top: 55px;
             margin-left: 24px;
-            font-size: 4.2em;
+            font-size: 3.4em;
             span {
                 position: relative;
                 margin-left: -100px;
-                top: 40px;
+                top: 27px;
                 font-family: 'Archivo';
                 span {
-                    margin-left: -181px;
+                    margin-left: -141px;
                 }
             }
         }
         .animated-txt-container {
             margin-top: 180px;
             h1 {
-                font-size: 1.7em;
+                font-size: 1.6em;
             }
         }
     }
