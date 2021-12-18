@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 @import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@300&display=swap");
 body, a, p, h1, h2, h3, h4, span, li, ul, button, input, form, div {
   font-family: 'Pretendard';
 }
@@ -18,11 +18,25 @@ body {
   height: 100vh;
 }
 
+.ir {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  text-indent: -9999px;
+  line-height: 0;
+  font-size: 1px;
+  color: transparent;
+}
+
 /* header */
 header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .cont-item {
@@ -110,11 +124,13 @@ header {
 }
 
 .cont-content .animated-txt-container h1 {
-  margin-right: -3px;
+  margin-right: -4px;
   font-size: 4.3em;
   display: inline;
   text-align: center;
   color: #fff;
+  -webkit-transition: all .3s;
+  transition: all .3s;
   -webkit-animation: h1font 3.5s ease-out infinite both;
           animation: h1font 3.5s ease-out infinite both;
 }
@@ -346,7 +362,7 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100%;
+  min-height: 100%;
 }
 
 .sub-cont:nth-child(1) {
@@ -359,20 +375,15 @@ main {
   border-left: 8px solid #000;
 }
 
-main .content-1 {
+main .main-cont {
   width: 55vw;
-  display: block;
+  padding-bottom: 100px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   background: #fff;
 }
 
 @media screen and (max-width: 1600px) {
-  .cont-content .animated-txt-container {
-    margin-top: 190px;
-    margin-bottom: 70px;
-  }
-  .cont-content .animated-txt-container h1 {
-    font-size: 3.4em;
-  }
   .cont-item #header-msg {
     font-size: 3.4em;
     padding-right: 15px;
@@ -387,6 +398,19 @@ main .content-1 {
   }
   .cont-content {
     height: 330px;
+    background-size: 430px;
+    background-position: top 10px right -25px;
+  }
+  .cont-content #myname {
+    margin-top: 55px;
+    margin-left: 65px;
+  }
+  .cont-content .animated-txt-container {
+    margin-top: 190px;
+    margin-bottom: 70px;
+  }
+  .cont-content .animated-txt-container h1 {
+    font-size: 3.4em;
   }
   .cont-menu {
     height: 330px;
@@ -475,7 +499,7 @@ main .content-1 {
   main .sub-cont:nth-child(3) {
     border-left: 8px solid #000;
   }
-  main .content-1 {
+  main .main-cont {
     width: 98vw;
   }
 }
@@ -513,18 +537,36 @@ main .content-1 {
 
 @media screen and (max-width: 768px) {
   .cont-content {
-    height: 290px;
+    height: 260px;
+    background-size: 300px;
+    background-position: top 10px right -40px;
   }
   .cont-content .animated-txt-container {
     margin-top: 190px;
     margin-bottom: 70px;
   }
   .cont-content .animated-txt-container h1 {
-    font-size: 2.8em;
+    font-size: 2.4em;
+  }
+  .cont-content #myname {
+    margin-top: 55px;
+    margin-left: 24px;
+    font-size: 4.5em;
+  }
+  .cont-content #myname span {
+    position: relative;
+    margin-left: -100px;
+    top: 35px;
+    font-family: 'Archivo';
+  }
+  .cont-content #myname span span {
+    margin-left: -190px;
   }
   /* menu */
   .cont-menu {
     height: 300px;
+    border-left: none;
+    border-right: none;
   }
   .cont-menu .menu {
     height: 280px;
@@ -542,64 +584,18 @@ main .content-1 {
   .circle-cont, main .sub-cont {
     display: none;
   }
-  main .content-1 {
+  main .main-cont {
     width: 100vw;
-    border-right: 8px solid #000;
-    border-left: 8px solid #000;
   }
 }
 
 @media screen and (max-width: 640px) {
-  .cont-content {
-    height: 290px;
-  }
   .cont-content .animated-txt-container {
     margin-top: 190px;
     margin-bottom: 70px;
   }
   .cont-content .animated-txt-container h1 {
     font-size: 2em;
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .cont-content {
-    height: 230px;
-    background-size: 300px;
-    background-position: top 10px right -40px;
-  }
-  .cont-content #myname {
-    margin-top: 55px;
-    margin-left: 24px;
-    font-size: 3.4em;
-  }
-  .cont-content #myname span {
-    position: relative;
-    margin-left: -100px;
-    top: 27px;
-    font-family: 'Archivo';
-  }
-  .cont-content #myname span span {
-    margin-left: -141px;
-  }
-  .cont-content .animated-txt-container {
-    margin-top: 180px;
-  }
-  .cont-content .animated-txt-container h1 {
-    font-size: 1.6em;
-  }
-  /* menu */
-  .cont-menu {
-    height: 250px;
-  }
-  .cont-menu .menu {
-    height: 235px;
-  }
-  .cont-menu .menu .tit-menu {
-    font-size: 1.7em;
-  }
-  .cont-menu .menu .tit-menu a {
-    line-height: 50px;
   }
 }
 /*# sourceMappingURL=style.css.map */

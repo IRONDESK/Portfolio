@@ -1,6 +1,6 @@
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300&display=swap');
 
 body, a, p, h1, h2, h3, h4, span, li, ul, button, input, form, div{ font-family: 'Pretendard';}
 a { text-decoration:none; color:inherit;}
@@ -17,10 +17,20 @@ body {
     background-color: $orange;
     height: 100vh;
 }
+.ir {
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    text-indent: -9999px;
+    line-height: 0;
+    font-size: 1px;
+    color: transparent;
+}
 
 /* header */
 header {
     display: flex;
+    flex-direction: row;
 }
 
 .cont-item {
@@ -91,11 +101,12 @@ header {
     margin-top: 200px;
     padding: 0;
     h1 {
-        margin-right: -3px;
+        margin-right: -4px;
         font-size: 4.3em;
         display: inline;
         text-align: center;
         color: #fff;
+        transition: all .3s;
         animation: h1font 3.5s ease-out infinite both;
         &:nth-child(1){animation-delay: .0s;}
         &:nth-child(2){animation-delay: .1s;}
@@ -188,13 +199,12 @@ header {
 
 main {
     display: flex;
-    height: 100%;
+    min-height: 100%;
 }
 .sub-cont {
     &:nth-child(1) {
         width: 20vw;
         border-right: $border8;
-
     }
     &:nth-child(3) {
         width: 25vw;
@@ -202,9 +212,10 @@ main {
 
     }
 }
-main .content-1 {
+main .main-cont {
     width: 55vw;
-    display: block;
+    padding-bottom: 100px;
+    box-sizing: border-box;
     background: #fff;
 }
 
@@ -213,14 +224,6 @@ main .content-1 {
 
 
 @media screen and (max-width: 1600px) {
-    .cont-content .animated-txt-container {
-        margin-top: 190px;
-        margin-bottom: 70px;
-        h1 {
-            font-size: 3.4em;
-        }
-    }
-
     .cont-item {
         #header-msg {
             font-size: 3.4em;
@@ -238,7 +241,21 @@ main .content-1 {
 
     .cont-content {
         height: 330px;
+        background-size: 430px;
+        background-position: top 10px right -25px;
+        #myname {
+            margin-top: 55px;
+            margin-left: 65px;
+        }
     }
+    .cont-content .animated-txt-container {
+        margin-top: 190px;
+        margin-bottom: 70px;
+        h1 {
+            font-size: 3.4em;
+        }
+    }
+
     .cont-menu {
         height: 330px;
         .menu {
@@ -323,7 +340,7 @@ main .content-1 {
             border-left: $border8;
         }
     }
-    main .content-1 {
+    main .main-cont {
         width: 98vw;
     }
 }
@@ -363,18 +380,36 @@ main .content-1 {
 
 @media screen and (max-width: 768px) {
     .cont-content {
-        height: 290px;
+        height: 260px;
+        background-size: 300px;
+        background-position: top 10px right -40px;
         .animated-txt-container {
             margin-top: 190px;
             margin-bottom: 70px;
             h1 {
-                font-size: 2.8em;
+                font-size: 2.4em;
+            }
+        }
+        #myname {
+            margin-top: 55px;
+            margin-left: 24px;
+            font-size: 4.5em;
+            span {
+                position: relative;
+                margin-left: -100px;
+                top: 35px;
+                font-family: 'Archivo';
+                span {
+                    margin-left: -190px;
+                }
             }
         }
     }
     /* menu */
     .cont-menu {
         height: 300px;
+        border-left: none;
+        border-right: none;
         .menu {
             height: 280px;
             .tit-menu {
@@ -392,60 +427,17 @@ main .content-1 {
     .circle-cont, main .sub-cont  {
         display: none;
     }
-    main .content-1 {
+    main .main-cont {
         width: 100vw;
-        border-right: $border8;
-        border-left: $border8;
     }
 }
 @media screen and (max-width: 640px) {
     .cont-content {
-        height: 290px;
         .animated-txt-container {
             margin-top: 190px;
             margin-bottom: 70px;
             h1 {
                 font-size: 2em;
-            }
-        }
-    }
-}
-@media screen and (max-width: 400px) {
-    .cont-content {
-        height: 230px;
-        background-size: 300px;
-        background-position: top 10px right -40px;
-        #myname {
-            margin-top: 55px;
-            margin-left: 24px;
-            font-size: 3.4em;
-            span {
-                position: relative;
-                margin-left: -100px;
-                top: 27px;
-                font-family: 'Archivo';
-                span {
-                    margin-left: -141px;
-                }
-            }
-        }
-        .animated-txt-container {
-            margin-top: 180px;
-            h1 {
-                font-size: 1.6em;
-            }
-        }
-    }
-    /* menu */
-    .cont-menu {
-        height: 250px;
-        .menu {
-            height: 235px;
-            .tit-menu {
-                font-size: 1.7em;
-                a {
-                    line-height: 50px;
-                }
             }
         }
     }

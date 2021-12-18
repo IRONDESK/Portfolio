@@ -4,17 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="wispanh=device-wispanh, initial-scale=1.0">
     <title>IRONDESK: SOOCHUL SON</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/content.css">
+    <script src="https://kit.fontawesome.com/19d00c3240.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
-        <!-- 상단 콘텐츠 -->
+        <!-- 상단 좌측 -->
         <article class="cont-item">
-            <span id="header-msg">すべては よくなる。</span>
+            <h1 class="ir">
+                포트폴리오를 뜻하는 일본어. 마우스을 올리면 영어로 바뀝니다.
+            </h1>
+            <span id="header-msg">ポート フォリオ</span>
             <div class="circle-cont">
                 <span class="circle"></span>
                 <span class="circle"></span>
@@ -53,12 +58,13 @@
                 <h1>r</h1>
             </div>
         </article>
-        <!-- 상단 메뉴 -->
+        <!-- 상단 우측(메뉴) -->
         <nav class="cont-menu">
             <ul class="menu">
-                <li class="tit-menu"><a href="#">#ABOUT ME</a></li>
-                <li class="tit-menu"><a href="#">#SKILLS</a></li>
-                <li class="tit-menu"><a href="#">#WORKS</a>
+                <li class="tit-menu"><a id="link-index" href="#"># INDEX</a></li>
+                <li class="tit-menu"><a id="link-about" href="#"># ABOUT ME</a></li>
+                <li class="tit-menu"><a id="link-skills" href="#"># SKILLS</a></li>
+                <li class="tit-menu"><a id="link-works" href="#"># WORKS</a>
                     <ul class="sub-menu">
                         <li><a href="#">HTML/CSS</a></li>
                         <li><a href="#">JavaScript</a></li>
@@ -66,23 +72,150 @@
                         <li><a href="#">Node</a></li>
                     </ul>
                 </li>
-                <li class="tit-menu"><a href="#">#CONTACT</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section class="sub-cont">11</section>
-        <section class="content-1">
-            hi world!
+        <section class="sub-cont"></section>
+        <section class="main-cont">
+            <!-- index -->
+            <article class="contents-index">
+                <h1>안녕하세요<br>
+                    <span class="highlight">손수철</span>입니다.
+                </h1>
+                <article class="link">
+                    <h2 class="ir">연락처</h2>
+                    <a href="mailto:zerozerobase@gmail.com"><i class="fas fa-at"><span class="ir">이메일</span></i></a>
+                    <a href="https://github.com/IRONDESK"><i class="fab fa-github"><span class="ir">깃허브</span></i></a>
+                    <a href="https://zero1zero.tistory.com/"><i class="fas fa-rss"><span class="ir">블로그</span></i></a>
+                    <i class="fas fa-file-invoice"><span class="ir">이력서</span></i>
+                </article>
+                <article class="item-box">
+                    <i class="emoji">🙇</i>
+                    <h3>Front-end 개발자가 되기 위해 준비해온 것들을 정리했습니다.</h>
+                </article>
+                <article class="item-box">
+                    <i class="emoji">📱</i>
+                    <h3>다양한 디바이스에 대응한 반응형 웹페이지입니다.</h>
+                </article>
+            </article>
+            <!-- about me -->
+            <article class="contents-about off">
+                <h5>💰💵🎓경제학 전공</h5>
+                <h4>📡📈🎨광고·마케팅·디자인</h4>
+                <h3>💻🐞📌기획·프론트엔드 개발</h3>
+
+                <h1>많은 것을 해왔지만<br>허투루 하지 않았습니다</h1>
+
+                <article class="item-box">
+                    <img src="./img/about-img1.jpeg" alt="이미지">
+                    <p class="explain-cont">
+                        <strong>광고연합동아리 애드파워</strong>
+                        <span>2018 2020.12</span>
+                    </p>
+                </article>
+                <article class="item-box">
+                    <img src="./img/about-img1.jpeg" alt="이미지">
+                    <p class="explain-cont">
+                        <strong>사라질전당포展 전시기획 및 사이트 개발</strong>
+                        <span>2019.11</span>
+                    </p>
+                </article>
+                <article class="item-box">
+                    <img src="./img/about-img1.jpeg" alt="이미지">
+                    <p class="explain-cont">
+                        <strong>디지털마케팅 제일펑타이 인턴</strong>
+                        <span>2019.12 - 2020.06</span>
+                    </p>
+                </article>
+                <article class="item-box">
+                    <img src="./img/about-img1.jpeg" alt="이미지">
+                    <p class="explain-cont">
+                        <strong>부산국제광고제 Communicaiton Design</strong>
+                        <span>2020.09 / Finalist</span>
+                    </p>
+                </article>
+                <article class="item-box">
+                    <img src="./img/about-img1.jpeg" alt="이미지">
+                    <p class="explain-cont">
+                        <strong>멋쟁이사자처럼 FE School 1기</strong>
+                        <span>2021.11 - 2022.02(예정)</span>
+                    </p>
+                </article>
+            </article>
+            <!-- skills -->
+            <article class="contents-skills off">
+                <article class="item-box">
+                    <h1>Language</h1>
+                    <i class="fab fa-html5"></i>
+                    <i class="fab fa-css3-alt"></i>
+                    <i class="fab fa-js-square"></i>
+                    <i class="fab fa-python"></i>
+                </article>
+                <article class="item-box">
+                    <h1>Design</h1>
+                    <i id="photoshop">Ps</i>
+                    <i id="illustrator">Ai</i>
+
+                </article>
+            </article>
+            <!-- works -->
+            <article class="contents-works off">
+                <h1>test</h1>
+                <article class="item-container">
+                    <article class="item-box">
+                        <img src="./img/thumnail/1.jpg" alt="">
+                        <p class="explain-cont">
+                            <strong>타이틀</strong>
+                            <span>날짜</span>
+                        </p>
+                    </article>
+                    <article class="item-box">
+                        <img src="./img/thumnail/2.jpg" alt="">
+                        <p class="explain-cont">
+                            <strong>▲</strong>
+                            <span></span>
+                        </p>
+                    </article>
+                    <article class="item-box">
+                        <img src="./img/thumnail/3.jpg" alt="">
+                        <p class="explain-cont">
+                            <strong></strong>
+                            <span></span>
+                        </p>
+                    </article>
+                    <article class="item-box">
+                        <img src="./img/thumnail/4.jpg" alt="">
+                        <p class="explain-cont">
+                            <strong></strong>
+                            <span></span>
+                        </p>
+                    </article>
+                    <article class="item-box">
+                        <img src="./img/thumnail/5.jpg" alt="">
+                        <p class="explain-cont">
+                            <strong></strong>
+                            <span></span>
+                        </p>
+                    </article>
+                    <article class="item-box">
+                        <img src="./img/thumnail/6.jpg" alt="">
+                        <p class="explain-cont">
+                            <strong></strong>
+                            <span></span>
+                        </p>
+                    </article>
+                </article>
+
+            </article>
         </section>
-        <section class="sub-cont">22</section>
+        <section class="sub-cont"></section>
     </main>
 
     <section class="circle-cont">
         <span class="bg-circle"></span>
         <span class="bg-circle"></span>
     </section>
-
     <script src="index.js"></script>
 </body>
 
