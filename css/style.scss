@@ -313,6 +313,7 @@ main .main-cont {
         box-sizing: border-box;
         height: 340px;
         .menu {
+            height: 320px;
             .tit-menu {
                 font-size: 2.3em;
                 border-bottom: $border8;
@@ -332,16 +333,17 @@ main .main-cont {
         display: none;
     }
     main .sub-cont {
-        width: 2vw;
         &:nth-child(1) {
+            width: 18vw;
             border-right: $border8;
         }
         &:nth-child(3) {
+            width: 18vw;
             border-left: $border8;
         }
     }
     main .main-cont {
-        width: 98vw;
+        width: 64vw;
     }
 }
 

@@ -94,12 +94,12 @@ $border2: 2px solid #000;
         &:nth-child(2n) {
             float: left;
             margin-left: -10%;
-            @include box-move(left, 1.4s)
+            @include box-move(left, .9s)
         }
         &:nth-child(2n+1) {
             float: right;
             margin-right: -10%;
-            @include box-move(right, 1.2s)
+            @include box-move(right, .7s)
         }
     }
 }
@@ -147,25 +147,27 @@ $border2: 2px solid #000;
         padding: 0;
         background: #fff;
         border: $border8;
-        width: 77%;
+        width: 78%;
         height: 100px;
         img {
             width: 150px;
+            height: auto;
+            object-fit: contain;
         }
         .explain-cont {
             display: flex;
+            position: relative;
             flex-direction: column;
             flex: 2;
             font-size: 22px;
-            padding: 12px;
+            padding: 13px;
             strong {
                 font-weight: 800;
             }
             strong, span {
                 flex: 1;
-                display: block;
                 text-align: left;
-                padding: 5px;
+                line-height: 150%;
             }
         }
         &:nth-child(2n) {
@@ -223,24 +225,198 @@ $border2: 2px solid #000;
 
 // works
 .contents-works {
-    position: relative;
     text-align: center;
     word-break: keep-all;
     padding-top: 45px;
+
     .item-container {
-        position: absolute;
         display: flex;
         flex-wrap: wrap;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 1015px;
-        gap: 30px;
+        justify-content: space-between;
+        margin-top: 100px;
         .item-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            padding: 0;
+            background: #fff;
             border: $border8;
-            background-color: #fff;
-            width: 300px;
+            width: 39%;
             height: 300px;
+            margin-top: 50px;
+            transition: all .2s;
+            img {
+                height: 75%;
+                object-fit:cover;
+                border-bottom: $border8;
+            }
+            .explain-cont {
+                height: 25%;
+                strong {
+                    padding: 8px 4px 0;
+                    display: block;
+                    text-align: center;
+                    font-weight: 800;
+                    font-size: 27px;
+                }
+                span {
+                    padding: 5px 0;
+                    display: block;
+                    text-align: center;
+                    font-weight: 600;
+                    color: #777;
+                    font-size: 20px;
+                }
+            }
+            &:hover {
+                background-color: $black;
+                color: #fff;
+            }
+            &:nth-child(3n-2) {
+                float: left;
+                margin-left: -17%;
+                @include box-move(left, 0s)
+            }
+            &:nth-child(3n-1) {
+                margin: 0 15px;
+                transform: translateY(-5%);
+                animation: fadein 1s both;
+                @keyframes fadein {
+                    0% {transform: translateY(-15px); opacity: 0%;}
+                    100% {transform: translateY(0px); opacity: 100%;}
+                }
+            }
+            &:nth-child(3n) {
+                float: right;
+                margin-right: -17%;
+                @include box-move(right, 0s)
+            }
+
         }
     }
 
+}
+
+@media screen and (max-width: 1300px) {
+    .contents-index {
+        .item-box {
+            width: 92%;
+        }
+    }
+    .contents-about {
+        .item-box {
+            margin-left: 0;
+            margin-right: 0;
+            width: 92%;
+            img {
+                width: 130px;
+            }
+            .explain-cont {
+                font-size: 19px;
+            }
+        }
+    }
+    .contents-works {
+        .item-container {
+            .item-box {
+                width: 39%;
+                .explain-cont {
+                    height: 25%;
+                    strong {
+                        font-size: 23px;
+                    }
+                    span {
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contents-index {
+        .item-box {
+            height: 95px;
+            .emoji {
+                font-size: 50px;
+            }
+            h3 {
+                font-size: 18px;
+                line-height: 29px;
+            }
+            &:nth-child(2n) {
+                float: left;
+                margin-left: 2%;
+            }
+            &:nth-child(2n+1) {
+                float: right;
+                margin-right: 2%;
+            }
+        }
+    }
+    .contents-about {
+        .item-box {
+            width: 92%;
+            .explain-cont {
+                font-size: 18px;
+                padding: 11px;
+                strong, span {
+                    flex: 1;
+                    text-align: left;
+                    line-height: 150%;
+                }
+            }
+            &:nth-child(2n) {
+                float: left;
+                margin-left: 2%;
+            }
+            &:nth-child(2n+1) {
+                float: right;
+                margin-right: 2%;
+            }
+        }
+    }
+    .contents-works {
+        .item-container {
+            .item-box {
+                width: 41%;
+                .explain-cont {
+                    strong {
+                        font-size: 21px;
+                    }
+                    span {
+                        // padding: 5px 0;
+                        font-size: 18px;
+                    }
+                }
+                &:nth-child(3n) {
+                    margin-right: 0%;
+                    animation: none;
+                }
+                &:nth-child(3n-2) {
+                    margin-right: 0%;
+                    animation: none;
+                }
+                &:nth-child(3n-1) {
+                    margin: 50px 0;
+                    transform: translateX(10%);
+                    animation: none;
+                }
+                &:nth-child(2n-1) {
+                    float: left;
+                    margin-left: 2%;
+                    @include box-move(left, 0s)
+                }
+                &:nth-child(2n) {
+                    float: right;
+                    margin-right: 2%;
+                    @include box-move(right, 0s)
+                }
+    
+            }
+        }
+    
+    }
 }

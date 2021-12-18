@@ -474,6 +474,9 @@ main .main-cont {
             box-sizing: border-box;
     height: 340px;
   }
+  .cont-menu .menu {
+    height: 320px;
+  }
   .cont-menu .menu .tit-menu {
     font-size: 2.3em;
     border-bottom: 8px solid #000;
@@ -490,17 +493,16 @@ main .main-cont {
   .circle-cont {
     display: none;
   }
-  main .sub-cont {
-    width: 2vw;
-  }
   main .sub-cont:nth-child(1) {
+    width: 18vw;
     border-right: 8px solid #000;
   }
   main .sub-cont:nth-child(3) {
+    width: 18vw;
     border-left: 8px solid #000;
   }
   main .main-cont {
-    width: 98vw;
+    width: 64vw;
   }
 }
 
