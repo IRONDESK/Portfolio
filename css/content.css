@@ -426,6 +426,12 @@
   padding-top: 45px;
 }
 
+.contents-works h1 {
+  font-weight: 700;
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
 .contents-works .item-container {
   display: -webkit-box;
   display: -ms-flexbox;
