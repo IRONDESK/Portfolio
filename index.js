@@ -1,45 +1,37 @@
-function textChange() {
-    /// Device에 따라 다른 문구 보여주기
-    const mql = window.matchMedia("screen and (max-width: 1300px)");
-    document.querySelector(".cont-item").addEventListener("mouseover", () => {
-        document.querySelector("#header-msg").innerText = mql.matches ? "Portfolio" : "Port- folio";
-    })
-    document.querySelector(".cont-item").addEventListener("mouseout", () => {
-        document.querySelector("#header-msg").innerText = "ポート フォリオ";
-    })
-};
-
 function menuMove() {
     const indexLink = document.querySelector("#link-index");
-    const aboutLink = document.querySelector("#link-about");
-    const skillsLink = document.querySelector("#link-skills");
+    const resumeLink = document.querySelector("#link-resume");
     const worksLink = document.querySelector("#link-works");
 
     indexLink.addEventListener("click", () => {
         document.querySelector(".contents-index").classList.remove("off");
-        document.querySelector(".contents-about").classList.add("off");
-        document.querySelector(".contents-skills").classList.add("off");
+        document.querySelector(".contents-resume").classList.add("off");
         document.querySelector(".contents-works").classList.add("off");
     })
-    aboutLink.addEventListener("click", () => {
+    resumeLink.addEventListener("click", () => {
         document.querySelector(".contents-index").classList.add("off");
-        document.querySelector(".contents-about").classList.remove("off");
-        document.querySelector(".contents-skills").classList.add("off");
-        document.querySelector(".contents-works").classList.add("off");
-    })
-    skillsLink.addEventListener("click", () => {
-        document.querySelector(".contents-index").classList.add("off");
-        document.querySelector(".contents-about").classList.add("off");
-        document.querySelector(".contents-skills").classList.remove("off");
+        document.querySelector(".contents-resume").classList.remove("off");
         document.querySelector(".contents-works").classList.add("off");
     })
     worksLink.addEventListener("click", () => {
         document.querySelector(".contents-index").classList.add("off");
-        document.querySelector(".contents-about").classList.add("off");
-        document.querySelector(".contents-skills").classList.add("off");
+        document.querySelector(".contents-resume").classList.add("off");
         document.querySelector(".contents-works").classList.remove("off");
     })
 };
 
-textChange();
+function darkmode() {
+    const body = document.querySelector("body");
+    const darkBtn = body.querySelector("#dark-btn");
+
+    darkBtn.addEventListener("click", () => {
+        if (body.classList.contains("dark")) {
+            document.querySelector("body").classList.remove("dark");
+        } else {
+            document.querySelector("body").classList.add("dark");
+        }
+    })
+}
+
 menuMove();
+darkmode();

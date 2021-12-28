@@ -1,8 +1,9 @@
 // 형광펜 효과 (부모에 사용하고 span으로 묶기)
-@mixin highlight ($width, $height, $text, $color:yellow, $time:1.5s, $delay: 0.6s) {
+@mixin highlight ($width, $height, $text, $color:yellow, $weight:normal, $time:1.5s, $delay: 0.6s) {
     .highlight {
         display: inline-block;
         height: $height;
+        font-weight: $weight;
         &::before {
             position: absolute;
             width: 0px;
@@ -38,270 +39,228 @@
     }
 }
 /* SASS 기본 */
-$orange: #FF5203;
+$orange: #ff5303;
 $black: rgb(19, 19, 19);
 $border8: 8px solid #000;
 $border2: 2px solid #000;
-.off { display: none; }
+
+
+// Fade-in 애니메이션
+@mixin fadein ($time:.8s, $delay:.3s) {
+    animation: fadein $time both $delay;
+    @keyframes fadein {
+        0% {opacity: 0;}
+        100% {opacity: 1;}
+    }
+}
+
+// 공통
+.contents-resume,
+.contents-works {
+    .img-cont {
+        height: 530px;
+        background-color: #f3f3f3;
+        background-image: url(../img/myphoto.gif);
+        background-size: 350px;
+        filter: grayscale(100%);
+        animation: resize-image 1s both;
+        @keyframes resize-image {
+            100% {height: 255px;}
+        }
+    }
+}
+.category1 {
+    position: relative;
+    margin-right: 7px;
+    padding: 2px 3px;
+    background-color: #999;
+    font-weight: 500;
+    color: #fff;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+.off {
+    display: none;
+}
 
 // index
 .contents-index {
-    // display: none;
     text-align: center;
     word-break: keep-all;
-    
+    .img-cont {
+        height: 530px;
+        background-color: #f3f3f3;
+        background-image: url(../img/myphoto.gif);
+        background-size: 350px;
+        filter: grayscale(100%);
+        @include fadein(1s, .2s);
+    }
     h1 {
-        padding: 45px;
-        line-height: 60px;
-        font-size: 45px;
-        font-weight: 800;
-        @include highlight (117px, 55px, "손수철", #ff530360, $delay: 0s);
+        margin: 45px;
+        font-size: 36px;
+        font-weight: 200;
+        @include highlight (94px, 30px, "손수철", #ebebeb, $delay: 0s, $weight: 600);
     }
     
-    .link {
+}
+
+// resume
+.contents-resume {
+    .title {
+        margin: 70px 0 110px;
+        font-weight: 700;
         font-size: 40px;
-        margin-bottom: 50px;
-        i {
-            margin: 0 13px;
-            opacity: 70%;
-            &:hover {
-                color: $orange;
-            }
+        line-height: 60px;
+        word-break: keep-all;
+        @include fadein;
+        strong {
+            font-weight: 900;
+            font-size: 50px;
         }
     }
-
-    .item-box {
-        position: relative;
+    .sub-title {
+        margin: 120px 0 25px;
+        font-weight: 700;
+        font-size: 22px;
+    }
+    .sub-text {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        margin-top: 45px;
-        padding: 0;
-        background: #fff;
-        border: $border8;
-        width: 77%;
-        height: 100px;
-        .emoji {
+        flex-wrap: wrap;
+        font-size: 19px;
+        font-weight: 300;
+        line-height: 28px;
+        dt {
             display: inline-block;
-            font-size: 60px;
+            font-weight: 500;
+            margin-right: 26px;
+            margin-bottom: 13px;
         }
-        h3 {
-            flex: 2;
-            padding: 0 15px;
-            font-size: 20px;
-            line-height: 32px;
-        }
-        &:nth-child(2n) {
-            float: left;
-            margin-left: -10%;
-            @include box-move(left, .9s)
-        }
-        &:nth-child(2n+1) {
-            float: right;
-            margin-right: -10%;
-            @include box-move(right, .7s)
-        }
-    }
-}
-
-// about-me
-.contents-about {
-    text-align: center;
-    word-break: keep-all;
-    padding-top: 45px;
-    
-    @mixin headfont($size, $delay, $height: 60px) {
-        line-height: $height;
-        font-size: $size;
-        animation: about-movetxt 1s both;
-        animation-delay: $delay;
-        @keyframes about-movetxt {
-            0% {transform: translateY(-20px); opacity: 0%;}
-            100% {transform: translateY(0px); opacity: 100%;}
-        }
-    }
-
-    h5 {
-        font-weight: 600;
-        @include headfont(34px, 0);
-    }
-    h4 {
-        font-weight: 600;
-        @include headfont(36px, .5s, 65px);
-    }
-    h3 {
-        font-weight: 600;
-        @include headfont(38px, .9s, 71px);
-    }
-
-    h1 {
-        margin: 48px;
-        font-weight: 800;
-        @include headfont(43px, 1.2s, 60px);
-    }
-
-    .item-box {
-        display: flex;
-        position: relative;
-        margin-top: 45px;
-        padding: 0;
-        background: #fff;
-        border: $border8;
-        width: 78%;
-        height: 100px;
-        img {
-            width: 150px;
-            height: auto;
-            object-fit: contain;
-        }
-        .explain-cont {
-            display: flex;
+        dd {
+            font-size: 18px;
             position: relative;
-            flex-direction: column;
-            flex: 2;
-            font-size: 22px;
-            padding: 13px;
-            strong {
-                font-weight: 800;
-            }
-            strong, span {
-                flex: 1;
-                text-align: left;
-                line-height: 150%;
-            }
+            margin-right: 78px;
+            margin-bottom: 13px;
         }
-        &:nth-child(2n) {
-            float: left;
-            margin-left: -10%;
-            @include box-move(left, 1.6s)
-        }
-        &:nth-child(2n+1) {
-            float: right;
-            margin-right: -10%;
-            @include box-move(right, 1.4s)
+        a:hover { color: $orange;}
+        a::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translate(7px, -50%);
+            width: 6px;
+            height: 6px;
+            border-radius: 100%;
+            background-color: $orange;
         }
     }
-}
-
-// skills
-.contents-skills {
-    text-align: center;
-    word-break: keep-all;
-    padding-top: 45px;
-
-    .item-box {
-        margin-bottom: 65px;
-        h1 {
-            font-weight: 700;
-            font-size: 34px;
-            margin-bottom: 20px;
-        }
+    .skill {
+        dd { flex: 3;}
         i {
-            cursor: pointer;
-            font-size: 60px;
-            margin: 0 13px;
-            opacity: 70%;
-            &:hover {
-                color: $orange;
-            }
+            position: relative;
+            margin-right: 45px;
         }
-        #photoshop, #illustrator {
-            display: inline-block;
-            border-radius: 6px;
-            color: #fff;
-            background-color: #000;
-            width: 58px;
-            height: 58px;
-            font-size: 36px;
-            font-weight: 600;
-            line-height: 58px;
-            &:hover {
-                background-color: $orange;
-            }
+        i::after {
+            position: absolute;
+            margin-right: 10px;
+            top: 50%;
+            transform: translate(7px, -50%);
+            font-size: 16px;
+            font-weight: 500;
+            color: #000;
+        }
+        .lv1::after { content: '•1';}
+        .lv2::after { content: '•2';}
+        .lv3::after { content: '•3';}
+        .lv4::after { content: '•4';}
+        .lv5::after { content: '•5';}
+    }
+    .experience {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 30px;
+        strong {
+            font-weight: 700;
+            font-size: 22px;
+            margin-right: 10px;
+        }
+        .list-title {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        .list-detail {
+            margin-left: 28px;
+            font-size: 17px;
+            list-style-type: disc;
         }
     }
-
 }
 
 // works
 .contents-works {
-    text-align: center;
-    word-break: keep-all;
-    padding-top: 45px;
-
-    h1 {
+    .title {
+        margin: 70px 0 110px;
         font-weight: 700;
-        font-size: 34px;
-        margin-bottom: 20px;
-    }
-
-    .item-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin-top: 100px;
-        .item-box {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            position: relative;
-            padding: 0;
-            background: #fff;
-            border: $border8;
-            width: 39%;
-            height: 300px;
-            margin-top: 50px;
-            transition: all .2s;
-            img {
-                height: 75%;
-                object-fit:cover;
-                border-bottom: $border8;
-            }
-            .explain-cont {
-                height: 25%;
-                strong {
-                    padding: 8px 4px 0;
-                    display: block;
-                    text-align: center;
-                    font-weight: 800;
-                    font-size: 27px;
-                }
-                span {
-                    padding: 5px 0;
-                    display: block;
-                    text-align: center;
-                    font-weight: 600;
-                    color: #777;
-                    font-size: 20px;
-                }
-            }
-            &:hover {
-                background-color: $black;
-                color: #fff;
-            }
-            &:nth-child(3n-2) {
-                float: left;
-                margin-left: -17%;
-                @include box-move(left, 0s)
-            }
-            &:nth-child(3n-1) {
-                margin: 0 15px;
-                transform: translateY(-5%);
-                animation: fadein 1s both;
-                @keyframes fadein {
-                    0% {transform: translateY(-15px); opacity: 0%;}
-                    100% {transform: translateY(0px); opacity: 100%;}
-                }
-            }
-            &:nth-child(3n) {
-                float: right;
-                margin-right: -17%;
-                @include box-move(right, 0s)
-            }
-
+        font-size: 40px;
+        line-height: 60px;
+        word-break: keep-all;
+        @include fadein;
+        strong {
+            font-weight: 900;
+            font-size: 50px;
         }
     }
 
+    .item-box {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        .item-detail {
+            .list-title {
+                margin-bottom: 11px;
+                strong {
+                    font-weight: 700;
+                    font-size: 22px;
+                }
+                .git-btn {
+                    position: relative;
+                    margin-right: 7px;
+                    padding: 2px 3px;
+                    background-color: #999;
+                    font-weight: 500;
+                    color: #fff;
+                    box-sizing: border-box;
+                    &:hover {
+                        background-color: $orange;
+                    }
+                    &::after {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    transform: translate(7px, -50%);
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 100%;
+                    background-color: $orange;
+                    }
+                }
+            }
+            .list-detail {
+                font-weight: 300;
+                margin: 10px 28px;
+                font-size: 17px;
+                list-style-type: disc;
+            }
+        }
+        img {
+            width: 230px;
+            height: 120px;
+            object-fit: cover;
+            filter: grayscale(90%);
+            &:hover {filter: grayscale(0);}
+        }
+    }
 }
 
 @media screen and (max-width: 1300px) {

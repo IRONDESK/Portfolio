@@ -9,214 +9,236 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/content.css">
-    <script src="https://kit.fontawesome.com/19d00c3240.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/19d00c3240.js"></script>
 </head>
 
 <body>
     <header>
-        <!-- 상단 좌측 -->
-        <article class="cont-item">
-            <h1 class="ir">
-                포트폴리오를 뜻하는 일본어. 마우스을 올리면 영어로 바뀝니다.
-            </h1>
-            <span id="header-msg">ポート フォリオ</span>
-            <div class="circle-cont">
-                <span class="circle"></span>
-                <span class="circle"></span>
-                <span class="circle"></span>
-            </div>
-        </article>
-        <!-- 상단 콘텐츠 -->
-        <article class="cont-content">
-            <span id="myname">SON
-                <span>SOO<span>CHUL</span></span>
-            </span>
-            <div class="animated-txt-container">
-                <h1>A</h1>
-                <h1>l</h1>
-                <h1>l</h1>
-                <h1>-</h1>
-                <h1>r</h1>
-                <h1>o</h1>
-                <h1>u</h1>
-                <h1>n</h1>
-                <h1>d</h1>
-                <h1>e</h1>
-                <h1>r</h1>
-                <h1>&nbsp;</h1>
-                <h1>F</h1>
-                <h1>E</h1>
-                <h1>&nbsp;</h1>
-                <h1>D</h1>
-                <h1>e</h1>
-                <h1>v</h1>
-                <h1>e</h1>
-                <h1>l</h1>
-                <h1>o</h1>
-                <h1>p</h1>
-                <h1>e</h1>
-                <h1>r</h1>
-            </div>
-        </article>
-        <!-- 상단 우측(메뉴) -->
-        <nav class="cont-menu">
-            <ul class="menu">
-                <li class="tit-menu"><a id="link-index" href="#"># INDEX</a></li>
-                <li class="tit-menu"><a id="link-about" href="#"># ABOUT ME</a></li>
-                <li class="tit-menu"><a id="link-skills" href="#"># SKILLS</a></li>
-                <li class="tit-menu"><a id="link-works" href="#"># WORKS</a>
-                    <ul class="sub-menu">
-                        <li><a href="#">HTML/CSS</a></li>
-                        <li><a href="#">JavaScript</a></li>
-                        <li><a href="#">Sever</a></li>
-                        <li><a href="#">Node</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
+        <h1 id="link-index">
+            <span class="show">SON<br>SOOCHUL</span>
+            <span class="hover">IRON<br>DESK</span>
+        </h1>
+        <ul class="menu-cont">
+            <li id="dark-btn"><i class="fas fa-adjust"></i></li>
+            <li class="menu-title" id="link-resume"><a>RESUME</a></li>
+            <li class="menu-title" id="link-works"><a>PORTFOLIO</a></li>
+        </ul>
     </header>
     <main>
-        <section class="sub-cont"></section>
-        <section class="main-cont">
-            <!-- index -->
-            <article class="contents-index">
-                <h1>안녕하세요<br>
-                    <span class="highlight">손수철</span>입니다.
-                </h1>
-                <article class="link">
-                    <h2 class="ir">연락처</h2>
-                    <a href="mailto:zerozerobase@gmail.com"><i class="fas fa-at"><span class="ir">이메일</span></i></a>
-                    <a href="https://github.com/IRONDESK"><i class="fab fa-github"><span class="ir">깃허브</span></i></a>
-                    <a href="https://zero1zero.tistory.com/"><i class="fas fa-rss"><span class="ir">블로그</span></i></a>
-                    <a href="resume/"><i class="fas fa-file-invoice"><span class="ir">이력서</span></i></a>
-                </article>
-                <article class="item-box">
-                    <i class="emoji">🙇</i>
-                    <h3>Front-end 개발자가 되기 위해 준비해온 것들을 정리했습니다.</h>
-                </article>
-                <article class="item-box">
-                    <i class="emoji">📱</i>
-                    <h3>다양한 디바이스에 대응한 반응형 웹페이지입니다.</h>
-                </article>
-            </article>
-            <!-- about me -->
-            <article class="contents-about off">
-                <h5>💰💵🎓경제학 전공</h5>
-                <h4>📡📈🎨광고·마케팅·디자인</h4>
-                <h3>💻🐞📌기획·프론트엔드 개발</h3>
-
-                <h1>많은 것을 해왔지만<br>허투루 하지 않았습니다</h1>
-
-                <article class="item-box">
-                    <img src="./img/about-img1.jpg" alt="애드파워 로고">
-                    <p class="explain-cont">
-                        <strong>광고연합동아리 애드파워</strong>
-                        <span>2018 - 2019, 2020.06 - 2020.12 (회장)</span>
-                    </p>
-                </article>
-                <article class="item-box">
-                    <img src="./img/about-img2.jpg" alt="이미지">
-                    <p class="explain-cont">
-                        <strong>사라질전당포展 전시기획 및 사이트 개발</strong>
-                        <span>2019.08 - 2019.11</span>
-                    </p>
-                </article>
-                <article class="item-box">
-                    <img src="./img/about-img3.jpg" alt="이미지">
-                    <p class="explain-cont">
-                        <strong>제일펑타이 디지털마케팅 AE 인턴</strong>
-                        <span>2019.12 - 2020.06</span>
-                    </p>
-                </article>
-                <article class="item-box">
-                    <img src="./img/about-img4.jpg" alt="이미지">
-                    <p class="explain-cont">
-                        <strong>부산국제광고제 2020 Finalist</strong>
-                        <span>Communication Design 부문</span>
-                    </p>
-                </article>
-                <article class="item-box">
-                    <img src="./img/about-img5.jpg" alt="이미지">
-                    <p class="explain-cont">
-                        <strong>멋쟁이사자처럼 FE School 1기</strong>
-                        <span>2021.11 - 2022.02(예정)</span>
-                    </p>
-                </article>
-            </article>
-            <!-- skills -->
-            <article class="contents-skills off">
-                <article class="item-box">
-                    <h1>Language</h1>
-                    <i class="fab fa-html5"></i>
-                    <i class="fab fa-css3-alt"></i>
-                    <i class="fab fa-js-square"></i>
-                    <i class="fab fa-python"></i>
-                </article>
-                <article class="item-box">
-                    <h1>Design</h1>
-                    <i id="photoshop">Ps</i>
-                    <i id="illustrator">Ai</i>
-
-                </article>
-            </article>
-            <!-- works -->
-            <article class="contents-works off">
-                <h1>주요 작업물</h1>
-                <article class="item-container">
-                    <a href="http://adpower.org/2019" class="item-box">
-                        <img src="./img/thumnail/1.jpg" alt="사라질전당포展">
-                        <p class="explain-cont">    
-                            <strong>사라질전당포展</strong>
-                            <span>개인. 2019</span>
-                        </p>
-                    </a>
-                    <a href="https://github.com/IRONDESK/Portfolio" class="item-box">
-                        <img src="./img/thumnail/2.jpg" alt="개인 포트폴리오">
-                        <p class="explain-cont">
-                            <strong>개인 포트폴리오</strong>
-                            <span>개인. 2021</span>
-                        </p>
-                    </a>
-                    <a href="https://github.com/IRONDESK/KakaoClone/" class="item-box">
-                        <img src="./img/thumnail/3.jpg" alt="카카오 클론">
-                        <p class="explain-cont">
-                            <strong>카카오 클론</strong>
-                            <span>개인. 2021</span>
-                        </p>
-                    </a>
-                    <a href="https://github.com/IRONDESK/HouseholdAccount/" class="item-box">
-                        <img src="./img/thumnail/4.jpg" alt="간단한 가계부">
-                        <p class="explain-cont">
-                            <strong>간단한 가계부</strong>
-                            <span>개인. 2021</span>
-                        </p>
-                    </a>
-                    <a href="https://irondesk.github.io/CoffeeMenu/" class="item-box">
-                        <img src="./img/thumnail/5.jpg" alt="카페 메뉴 관리">
-                        <p class="explain-cont">
-                            <strong>카페 메뉴 관리</strong>
-                            <span>개인. 2021</span>
-                        </p>
-                    </a>
-                    <a href="#" class="item-box">
-                        <img src="" alt="">
-                        <p class="explain-cont">
-                            <strong></strong>
-                            <span></span>
-                        </p>
-                    </a>
-                </article>
-
-            </article>
+        <!-- index -->
+        <section class="contents-index">
+            <article class="img-cont"></article>
+            <h1>All-rounder를 꿈꾸는 개발자 <span class="highlight">손수철</span>입니다.</h1>
         </section>
-        <section class="sub-cont"></section>
+
+        <!-- resume-->
+        <section class="contents-resume off">
+            <article class="img-cont"></article>
+            <h1 class="title">안녕하세요,<br><strong>개발하는 손수철입니다.</strong></h1>
+
+            <h2 class="sub-title">INTRODUCE</h2>
+            <p class="sub-text">Lorem ipsum dolor, sit expedita numquam dolores mollitiaam! amet consectetur adipisicing
+                elit. Minus, dolorem laudantium officia fuga expedita numquam dolores mollitiaam! Accusantium, a
+                voluptatibus!</p>
+
+            <h2 class="sub-title">PERSONAL</h2>
+            <dl class="sub-text">
+                <dt>Birth
+                <dd>1995. 7. 5.</dd>
+                </dt>
+                <dt>Phone
+                <dd>+82 10 5199 2429</dd>
+                </dt>
+                <dt>Place
+                <dd>Gimpo city of Gyeonggi-do, South Korea</dd>
+                </dt>
+            </dl>
+            <dl class="sub-text">
+                <dt>E-Mail
+                <dd><a href="mailto:zerozerobase@gmail.com">zerozerobase@gmail.com</a></dd>
+                </dt>
+                <dt>GitHub
+                <dd><a href="https://github.com/IRONDESK">github.com/IRONDESK</a></dd>
+                </dt>
+                <dt>Blog
+                <dd><a href="https://zero1zero.tistory.com/">zero1zero.tistory.com</a></dd>
+                </dt>
+            </dl>
+            <dl class="sub-text">
+                <dt>Degree
+                <dd>인하대학교 | 경제학 학사 | 2014. 03 - 2021. 08</dd>
+                </dt>
+            </dl>
+
+            <h2 class="sub-title">SKILL</h2>
+            <dl class="sub-text skill">
+                <dt>Language
+                <dd>
+                    <i class="lv4">HTML</i>
+                    <i class="lv3">CSS</i>
+                    <i class="lv3">SCSS</i>
+                    <i class="lv2">JavaScript</i>
+                    <i class="lv2">Python</i>
+                </dd>
+                </dt>
+            </dl>
+            <dl class="sub-text skill">
+                <dt>Framwork\Library
+                <dd>
+                    <i class="lv2">jQuery</i>
+                    <i class="lv1">React</i>
+                    <i class="lv2">Node.js</i>
+                </dd>
+                </dt>
+            </dl>
+            <dl class="sub-text skill">
+                <dt>Graphic
+                <dd>
+                    <i class="lv4">Photoshop</i>
+                    <i class="lv3">Illustrator</i>
+                </dd>
+                </dt>
+            </dl>
+            <dl class="sub-text skill">
+                <dt>ETC
+                <dd>
+                    <i>Git</i>
+                    <i>Google Docs</i>
+                    <i>WordPress</i>
+                    <i>MS Office</i>
+                </dd>
+                </dt>
+            </dl>
+
+            <h2 class="sub-title">EXPERIENCE</h2>
+            <ul class="sub-text experience">
+                <li class="list-title">
+                    <strong>연합동아리 애드파워</strong>
+                    <span>2018 - 2019, 2020.06 - 2020.12 (회장)</span>
+                </li>
+                <li class="list-detail">Lorem ipsum dolor, consectetur adipisicing elit.</li>
+                <li class="list-detail">Lorem ipsum dolor, consectetur adipisicing elit.</li>
+                <li class="list-detail">Lorem ipsum dolor, consectetur adipisicing elit.</li>
+            </ul>
+            <ul class="sub-text experience">
+                <li class="list-title">
+                    <strong>사라질전당포展</strong>
+                    <span>2019.08 - 2019.11</span>
+                </li>
+                <li class="list-detail">Lorem ipsum dolor, consectetur adipisicing elit.</li>
+                <li class="list-detail">Lorem ipsum dolor, consectetur adipisicing elit.</li>
+                <li class="list-detail">Lorem ipsum dolor, consectetur adipisicing elit.</li>
+            </ul>
+            <ul class="sub-text experience">
+                <li class="list-title">
+                    <strong>제일펑타이 디지털마케팅 AE 인턴</strong>
+                    <span>2019.12 - 2020.06</span>
+                </li>
+                <li class="list-detail">Lorem ipsum dolor, consectetur adipisicing elit.</li>
+                <li class="list-detail">Lorem ipsum dolor, consectetur adipisicing elit.</li>
+                <li class="list-detail">Lorem ipsum dolor, consectetur adipisicing elit.</li>
+            </ul>
+            <ul class="sub-text experience">
+                <li class="list-title">
+                    <strong>멋쟁이사자처럼 Front-End School 1기</strong>
+                    <span>2021.11 - 2022.02(예정)</span>
+                </li>
+                <li class="list-detail">Lorem ipsum dolor, consectetur adipisicing elit.</li>
+                <li class="list-detail">Lorem ipsum dolor, consectetur adipisicing elit.</li>
+                <li class="list-detail">Lorem ipsum dolor, consectetur adipisicing elit.</li>
+            </ul>
+
+            <h2 class="sub-title">AWARDED</h2>
+            <ul class="sub-text experience">
+                <li class="list-title">
+                    <strong>부산국제광고제</strong>
+                    <span class="category1">TEAM</span><span>2020.09</span>
+                </li>
+                <li class="list-detail">Communication Design Finalist</li>
+            </ul>
+        </section>
+
+        <!-- works -->
+        <section class="contents-works off">
+            <article class="img-cont"></article>
+            <h1 class="title">여기는<br><strong>참여한 프로젝트 목록입니다.</strong></h1>
+
+            <article class="item-box">
+                <ul class="item-detail">
+                    <li class="list-title">
+                        <strong>사라질전당포展</strong>
+                        <span class="category1">INDIVIDUAL</span>
+                        <!-- <a href="https://github.com/IRONDESK/" class="git-btn">GitHub</a> -->
+                    </li>
+                    <li class="list-detail">Lorem ipsum dolor sit amet consectetur sit amet consectetur adipisicing.</li>
+                    <li class="list-detail">Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                </ul>
+                <a href="http://adpower.org/2019"><img src="./img/thumnail/1.jpg" alt="사라질전당포展"></a>
+            </article>
+
+            <article class="item-box">
+                <ul class="item-detail">
+                    <li class="list-title">
+                        <strong>개인 포트폴리오</strong>
+                        <span class="category1">INDIVIDUAL</span>
+                        <a href="https://github.com/IRONDESK/Portfolio" class="git-btn">GitHub</a>
+                    </li>
+                </ul>
+                <a href="https://github.com/IRONDESK/Portfolio"><img src="./img/thumnail/2.jpg" alt="개인 포트폴리오"></a>
+            </article>
+
+            <article class="item-box">
+                <ul class="item-detail">
+                    <li class="list-title">
+                        <strong>카카오 클론</strong>
+                        <span class="category1">INDIVIDUAL</span>
+                        <a href="https://github.com/IRONDESK/KakaoClone" class="git-btn">GitHub</a>
+                    </li>
+                </ul>
+                <a href="https://github.com/IRONDESK/KakaoClone/"><img src="./img/thumnail/3.jpg" alt="카카오 클론"></a>
+            </article>
+
+            <article class="item-box">
+                <ul class="item-detail">
+                    <li class="list-title">
+                        <strong>간단한 가계부</strong>
+                        <span class="category1">INDIVIDUAL</span>
+                        <a href="https://github.com/IRONDESK/HouseholdAccount" class="git-btn">GitHub</a>
+                    </li>
+                </ul>
+                <a href="https://github.com/IRONDESK/HouseholdAccount/"><img src="./img/thumnail/4.jpg"
+                        alt="간단한 가계부"></a>
+            </article>
+
+            <article class="item-box">
+                <ul class="item-detail">
+                    <li class="list-title">
+                        <strong>카페 메뉴 관리</strong>
+                        <span class="category1">INDIVIDUAL</span><a class="git-btn">GitHub</a>
+                    </li>
+                </ul>
+                <a href="https://irondesk.github.io/CoffeeMenu/"><img src="./img/thumnail/5.jpg" alt="카페 메뉴 관리"></a>
+            </article>
+
+            <article class="item-box">
+                <ul class="item-detail">
+                    <li class="list-title">
+                        <strong></strong>
+                        <span class="category1">TEAM</span><a class="git-btn">GitHub</a>
+                    </li>
+                </ul>
+                <a href="#"><img src="" alt=""></a>
+            </article>
+
+        </section>
     </main>
 
-    <section class="circle-cont">
-        <span class="bg-circle"></span>
-        <span class="bg-circle"></span>
-    </section>
     <script src="index.js"></script>
 </body>
 
 </html>
+
+<!-- <li class="tit-menu"><a id="link-index" href="#"># INDEX</a></li>
+<li class="tit-menu"><a id="link-about" href="#"># ABOUT ME</a></li>
+<li class="tit-menu"><a id="link-skills" href="#"># SKILLS</a></li>
+<li class="tit-menu"><a id="link-works" href="#"># WORKS</a> -->
