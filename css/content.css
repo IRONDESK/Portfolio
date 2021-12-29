@@ -6,6 +6,7 @@
   background-color: #f3f3f3;
   background-image: url(../img/myphoto.gif);
   background-size: 350px;
+  background-position: top center;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
   -webkit-animation: resize-image 1s both;
@@ -49,6 +50,7 @@
   height: 530px;
   background-color: #f3f3f3;
   background-image: url(../img/myphoto.gif);
+  background-position: top center;
   background-size: 350px;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
@@ -147,8 +149,28 @@
 
 .contents-resume .sub-title {
   margin: 120px 0 25px;
-  font-weight: 700;
+  font-weight: 800;
   font-size: 22px;
+}
+
+.contents-resume .sub-title i {
+  margin-left: 4px;
+  opacity: 45%;
+  font-size: 21px;
+}
+
+.contents-resume .sub-title i:hover {
+  cursor: help;
+  opacity: 100%;
+  color: #ff5303;
+}
+
+.contents-resume .sub-title i:hover::after {
+  content: '•1 Basic •2 Demonstrating •3 Proficient •4 Expert';
+  font-weight: 500;
+  font-family: 'Archivo';
+  font-size: 16px;
+  padding-left: 6px;
 }
 
 .contents-resume .sub-text {
@@ -162,7 +184,12 @@
       flex-wrap: wrap;
   font-size: 19px;
   font-weight: 300;
-  line-height: 28px;
+  line-height: 32px;
+}
+
+.contents-resume .sub-text strong {
+  font-weight: 700;
+  font-size: 20px;
 }
 
 .contents-resume .sub-text dt {
@@ -254,15 +281,16 @@
 .contents-resume .experience strong {
   font-weight: 700;
   font-size: 22px;
-  margin-right: 10px;
+  margin-right: 8px;
 }
 
 .contents-resume .experience .list-title {
   font-size: 16px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .contents-resume .experience .list-detail {
+  position: relative;
   margin-left: 28px;
   font-size: 17px;
   list-style-type: disc;
@@ -299,15 +327,16 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 83px;
 }
 
 .contents-works .item-box .item-detail .list-title {
-  margin-bottom: 11px;
+  margin-bottom: 13px;
 }
 
 .contents-works .item-box .item-detail .list-title strong {
-  font-weight: 700;
+  padding-right: 5px;
+  font-weight: 800;
   font-size: 22px;
 }
 
@@ -339,27 +368,78 @@
 }
 
 .contents-works .item-box .item-detail .list-detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 18px 2px;
+  font-size: 18px;
+}
+
+.contents-works .item-box .item-detail .list-detail strong {
+  display: inline-block;
+  width: 107px;
+  font-weight: 500;
+}
+
+.contents-works .item-box .item-detail .list-detail span {
   font-weight: 300;
-  margin: 10px 28px;
   font-size: 17px;
-  list-style-type: disc;
 }
 
-.contents-works .item-box img {
-  width: 230px;
-  height: 120px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -webkit-filter: grayscale(90%);
-          filter: grayscale(90%);
+.contents-works .item-box .item-detail .list-detail li {
+  font-weight: 300;
+  font-size: 17px;
+  margin-bottom: 9px;
 }
 
-.contents-works .item-box img:hover {
+.contents-works .item-box .item-detail .list-detail li::before {
+  content: '-';
+  margin-right: 5px;
+}
+
+.contents-works .item-box .img-link {
+  -webkit-filter: grayscale(80%);
+          filter: grayscale(80%);
+  height: 125px;
+}
+
+.contents-works .item-box .img-link:hover {
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
 }
 
-@media screen and (max-width: 1300px) {
+.contents-works .item-box .img-link:hover::after {
+  content: 'MOVE TO PAGE';
+  position: absolute;
+  text-align: center;
+  padding-top: 22%;
+  left: 0;
+  width: 230px;
+  height: 120px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 800;
+  border-bottom-left-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.contents-works .item-box .img-link img {
+  overflow: hidden;
+  position: relative;
+  width: 230px;
+  height: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-bottom-left-radius: 20px;
+  border-left: 2px solid #eeeeee;
+  border-bottom: 2px solid #eeeeee;
+}
+
+@media screen and (max-width: 1440px) {
   .contents-index .item-box {
     width: 92%;
   }
