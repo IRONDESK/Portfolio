@@ -477,6 +477,9 @@ body.dark .contents-works .img-link img {
   .contents-resume .personal .sub-text:nth-child(3) {
     width: 413px;
   }
+  .contents-resume .personal .sub-text dt {
+    width: 58px;
+  }
   .contents-resume .techskill .sub-text {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -487,7 +490,7 @@ body.dark .contents-works .img-link img {
             align-items: flex-start;
     margin-bottom: 20px;
   }
-  .contents-resume .experience .list-title .exp-date {
+  .contents-resume .exp-date {
     display: inline-block;
   }
   .contents-works .item-box {

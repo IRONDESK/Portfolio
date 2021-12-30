@@ -377,6 +377,9 @@ body.dark {
                 &:nth-child(3) {
                     width: 413px;
                 }
+                dt {
+                    width: 58px;
+                }
             }
         }
         .techskill {
@@ -386,12 +389,8 @@ body.dark {
                 margin-bottom: 20px;
             }
         }
-        .experience {
-            .list-title {
-                .exp-date {
-                    display: inline-block;
-                }
-            }
+        .exp-date {
+            display: inline-block;
         }
     }
 
