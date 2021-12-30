@@ -34,19 +34,6 @@ body.dark {
     .menu-cont li:hover {
         color: #fff;
     }
-    .contents-index h1 .highlight {
-        color: #000;
-    }
-    .contents-resume .skill i::after {
-        color: #dfdfdf;
-    }
-    .category1 {
-        background-color: #555;
-    }
-    .contents-works .item-box .item-detail .list-title .git-btn {
-        background-color: #555;
-        &:hover { background-color: $orange;}
-    }
 }
 
 
@@ -67,7 +54,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 30px 16%;
+    padding: 30px 13%;
     h1 {
         cursor: pointer;
         width: 240px;
@@ -120,7 +107,7 @@ header {
 
 /* main */
 main {
-    padding: 15px 16%;
+    padding: 15px 13%;
 }
 
 
@@ -128,224 +115,24 @@ main {
 ////////////////////////////////////////
 
 
-@media screen and (max-width: 1600px) {
-    .cont-item {
-        #header-msg {
-            font-size: 3.4em;
-            padding-right: 15px;
-        }
-        .circle-cont {
-            top: 105px;
-            left: 20px;
-            .circle {
-                width: 90px;
-                height: 200px;
-            }
-        }
-    }
 
-    .cont-content {
-        height: 330px;
-        background-size: 430px;
-        background-position: top 10px right -25px;
-        #myname {
-            margin-top: 55px;
-            margin-left: 65px;
-        }
-    }
-    .cont-content .animated-txt-container {
-        margin-top: 190px;
-        margin-bottom: 70px;
-        h1 {
-            font-size: 3.4em;
-        }
-    }
-
-    .cont-menu {
-        height: 330px;
-        .menu {
-            height: 330px;
-            .tit-menu {
-                font-size: 2.3em;
-                a {
-                    line-height: 75px;
-                }
-            }
-            .sub-menu {
-                display: none;
-            }
-        }
-    }
-}
-@media screen and (max-width: 1300px) {
-    header {
-        flex-direction: column;
-    }
-    .cont-item, .cont-content, .cont-menu {
-        width: 100%;
-    }
-    .cont-item {
-        position: relative;
-        text-align: center;
-        border: none;
-        #header-msg {
-            display: inline-block;
-            font-size: 3.2em;
-            transform: none;
-            padding-right: 0px;
-        }
-        .circle-cont {
-            display: none;
-        }
-    }
-    
-    .cont-content {
-        border: none;
-        #myname {
-            margin-top: 66px;
-        }
-        .animated-txt-container {
-        margin-top: 190px;
-        margin-bottom: 70px;
-            h1 {
-                font-size: 4.6em;
-            }
-        }
-    }
-    /* menu */
-    .cont-menu {
-        border: $border8;
-        box-sizing: border-box;
-        height: 340px;
-        .menu {
-            height: 320px;
-            .tit-menu {
-                font-size: 2.3em;
-                border-bottom: $border8;
-                box-sizing: border-box;
-                &:last-child {
-                    border-bottom: none;
-                }
-            }
-            .sub-menu {
-                display: none;
-            }
-        }
-    }
-
-    /* main */
-    .circle-cont {
-        display: none;
-    }
-    main .sub-cont {
-        &:nth-child(1) {
-            width: 18vw;
-            border-right: $border8;
-        }
-        &:nth-child(3) {
-            width: 18vw;
-            border-left: $border8;
-        }
-    }
-    main .main-cont {
-        width: 64vw;
+@media screen and (max-width: 1390px) {
+    header, main {
+        padding-left: 10%;
+        padding-right: 10%;
     }
 }
 
-@media screen and (max-width: 1024px) {
-    .cont-item {
-        #header-msg {
-            font-size: 2em
-        }
-    }
-    .cont-content {
-        height: 290px;
-        background-size: 430px;
-        background-position: top 10px right;
-        #myname {
-            margin-left: 55px;
-            font-size: 5.5em;
-            span {
-                position: relative;
-                margin-left: -100px;
-                top: 40px;
-                font-family: 'Archivo';
-                span {
-                    margin-left: -230px;
-                }
-            }
-        }
-        .animated-txt-container {
-            margin-top: 190px;
-            margin-bottom: 70px;
-            h1 {
-                font-size: 3.4em;
-            }
-        }
+@media screen and (max-width: 1280px) {
+    header, main {
+        padding-left: 7%;
+        padding-right: 7%;
     }
 }
 
-@media screen and (max-width: 768px) {
-    .cont-content {
-        height: 260px;
-        background-size: 300px;
-        background-position: top 10px right -40px;
-        .animated-txt-container {
-            margin-top: 190px;
-            margin-bottom: 70px;
-            h1 {
-                font-size: 2.4em;
-            }
-        }
-        #myname {
-            margin-top: 55px;
-            margin-left: 24px;
-            font-size: 4.5em;
-            span {
-                position: relative;
-                margin-left: -100px;
-                top: 35px;
-                font-family: 'Archivo';
-                span {
-                    margin-left: -190px;
-                }
-            }
-        }
-    }
-    /* menu */
-    .cont-menu {
-        height: 300px;
-        border-left: none;
-        border-right: none;
-        .menu {
-            height: 280px;
-            .tit-menu {
-                font-size: 1.7em;
-                a {
-                    line-height: 65px;
-                }
-            }
-            .sub-menu {
-                display: none;
-            }
-        }
-    }
-    /* main */
-    .circle-cont, main .sub-cont  {
-        display: none;
-    }
-    main .main-cont {
-        width: 100vw;
-    }
-}
 @media screen and (max-width: 640px) {
-    .cont-content {
-        .animated-txt-container {
-            margin-top: 190px;
-            margin-bottom: 70px;
-            h1 {
-                font-size: 2em;
-            }
-        }
+    header, main {
+        padding-left: 4%;
+        padding-right: 4%;
     }
 }
