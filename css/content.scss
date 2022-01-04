@@ -387,6 +387,19 @@ body.dark {
             }
         }
         .techskill {
+            .sub-title {
+                &::after {
+                    display: block;
+                    content: '•1 Basic •2 Demonstrating •3 Proficient •4 Expert';
+                    font-weight: 500;
+                    font-family: 'Archivo';
+                    font-size: 16px;
+                    padding-left: 6px;
+                    margin-top: 12px;
+                    opacity: 0.6;
+                }
+                i {  display: none; }
+            }
             .sub-text {
                 flex-direction: column;
                 align-items: flex-start;
@@ -450,7 +463,7 @@ body.dark {
                     width: 370px;
                 }
                 &:nth-child(3) {
-                    width: 420px;
+                    width: 370px;
                 }
                 &:nth-child(4) {
                     dd {

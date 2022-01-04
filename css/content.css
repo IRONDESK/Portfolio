@@ -484,6 +484,19 @@ body.dark .contents-works .img-link img {
   .contents-resume .personal .sub-text dt {
     width: 58px;
   }
+  .contents-resume .techskill .sub-title::after {
+    display: block;
+    content: '•1 Basic •2 Demonstrating •3 Proficient •4 Expert';
+    font-weight: 500;
+    font-family: 'Archivo';
+    font-size: 16px;
+    padding-left: 6px;
+    margin-top: 12px;
+    opacity: 0.6;
+  }
+  .contents-resume .techskill .sub-title i {
+    display: none;
+  }
   .contents-resume .techskill .sub-text {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -551,7 +564,7 @@ body.dark .contents-works .img-link img {
     width: 370px;
   }
   .contents-resume .personal .sub-text:nth-child(3) {
-    width: 420px;
+    width: 370px;
   }
   .contents-resume .personal .sub-text:nth-child(4) dd {
     margin-right: 0;
