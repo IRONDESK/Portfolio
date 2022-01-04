@@ -403,6 +403,7 @@ body.dark .contents-works .img-link img {
   display: flex;
   margin: 18px 2px;
   font-size: 18px;
+  word-break: keep-all;
 }
 
 .contents-works .item-box .item-detail .list-detail strong {
@@ -428,6 +429,7 @@ body.dark .contents-works .img-link img {
 }
 
 .contents-works .item-box .img-link {
+  position: relative;
   -webkit-filter: grayscale(80%);
           filter: grayscale(80%);
   height: 125px;
@@ -505,6 +507,10 @@ body.dark .contents-works .img-link img {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
             order: 2;
+    word-break: keep-all;
+  }
+  .contents-works .item-box .item-detail .list-detail span {
+    line-height: 20px;
   }
   .contents-works .item-box .img-link {
     -webkit-box-ordinal-group: 2;

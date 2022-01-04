@@ -307,6 +307,7 @@ body.dark {
                 display: flex;
                 margin: 18px 2px;
                 font-size: 18px;
+                word-break: keep-all;
                 strong {
                     display: inline-block;
                     width: 107px;
@@ -328,6 +329,7 @@ body.dark {
             }
         }
         .img-link {
+            position: relative;
             filter: grayscale(80%);
             height: 125px;
             &:hover {
@@ -401,6 +403,10 @@ body.dark {
             flex-direction: column;
             .item-detail {
                 order: 2;
+                word-break: keep-all;
+                .list-detail span {
+                    line-height: 20px;
+                }
             }
             .img-link {
                 order: 1;
