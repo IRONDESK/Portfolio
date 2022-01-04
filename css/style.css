@@ -97,7 +97,6 @@ header h1:hover .hover {
 }
 
 header .menu-cont {
-  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -105,6 +104,9 @@ header .menu-cont {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -119,6 +121,7 @@ header .menu-cont:hover {
 }
 
 header .menu-cont #dark-btn {
+  width: 30px;
   color: #000;
 }
 
@@ -127,12 +130,17 @@ header .menu-cont #dark-btn:hover {
 }
 
 header .menu-cont #dark-btn i {
+  cursor: pointer;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
 }
 
 header .menu-cont li {
   margin-top: 9px;
+}
+
+header .menu-cont li a {
+  cursor: pointer;
 }
 
 header .menu-cont li:hover {

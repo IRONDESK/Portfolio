@@ -51,6 +51,8 @@ body.dark .contents-works .img-link img {
 
 .category1 {
   position: relative;
+  display: inline-block;
+  line-height: 17px;
   margin-right: 7px;
   padding: 2px 3px;
   background-color: #999;
@@ -522,6 +524,46 @@ body.dark .contents-works .img-link img {
     height: 150px;
     font-size: 18px;
     border-bottom-left-radius: 0px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .contents-resume .personal .sub-text:nth-child(2) {
+    width: 370px;
+  }
+  .contents-resume .personal .sub-text:nth-child(3) {
+    width: 420px;
+  }
+  .contents-resume .personal .sub-text:nth-child(4) dd {
+    margin-right: 0;
+  }
+  .contents-resume .personal .sub-text .large-width {
+    width: 200px;
+  }
+  .contents-resume .techskill .sub-text {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  .contents-resume .exp-date {
+    display: inline-block;
+  }
+  .contents-works .item-box .list-title {
+    line-height: 28px;
+  }
+  .contents-works .item-box .list-detail {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contents-works .item-box .list-detail strong {
+    padding: 9px 0;
   }
 }
 /*# sourceMappingURL=content.css.map */

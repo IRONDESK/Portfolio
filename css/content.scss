@@ -97,6 +97,8 @@ body.dark {
 }
 .category1 {
     position: relative;
+    display: inline-block;
+    line-height: 17px;
     margin-right: 7px;
     padding: 2px 3px;
     background-color: #999;
@@ -415,6 +417,54 @@ body.dark {
                     height: 150px;
                     font-size: 18px;
                     border-bottom-left-radius: 0px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+
+    .contents-resume {
+        .personal {
+            .sub-text {
+                &:nth-child(2) {
+                    width: 370px;
+                }
+                &:nth-child(3) {
+                    width: 420px;
+                }
+                &:nth-child(4) {
+                    dd {
+                        margin-right: 0;
+                    }
+                }
+                .large-width {
+                    width: 200px;
+                }
+            }
+        }
+        .techskill {
+            .sub-text {
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 20px;
+            }
+        }
+        .exp-date {
+            display: inline-block;
+        }
+    }
+
+    .contents-works {
+        .item-box {
+            .list-title {
+                line-height: 28px;
+            }
+            .list-detail {
+                flex-direction: column;
+                strong {
+                    padding: 9px 0;
                 }
             }
         }
