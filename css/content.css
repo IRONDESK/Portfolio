@@ -28,7 +28,7 @@ body.dark .contents-works .img-link img {
 .contents-works .img-cont {
   height: 530px;
   background-color: #f3f3f3;
-  background-image: url(../img/myphoto.png);
+  background-image: url(../img/myphoto.gif);
   background-size: 350px;
   background-position: top center;
   -webkit-filter: grayscale(100%);
@@ -75,7 +75,7 @@ body.dark .contents-works .img-link img {
 .contents-index .img-cont {
   height: 530px;
   background-color: #f3f3f3;
-  background-image: url(../img/myphoto.png);
+  background-image: url(../img/myphoto.gif);
   background-position: top center;
   background-size: 350px;
   -webkit-filter: grayscale(100%);
