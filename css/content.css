@@ -413,6 +413,7 @@ body.dark .contents-works .img-link img {
 }
 
 .contents-works .item-box .item-detail .list-detail span {
+  display: inline;
   font-weight: 300;
   font-size: 17px;
 }
@@ -426,6 +427,28 @@ body.dark .contents-works .img-link img {
 .contents-works .item-box .item-detail .list-detail li::before {
   content: '-';
   margin-right: 5px;
+}
+
+.contents-works .item-box .item-detail .list-detail .stack-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 5px;
+}
+
+.contents-works .item-box .item-detail .list-detail stack {
+  display: inline;
+  margin-right: 3px;
+  padding: 3px 6px;
+  background-color: #eeeeee;
+  font-size: 15.5px;
+  border-radius: 7px;
+}
+
+.contents-works .item-box .item-detail .list-detail stack:last-child {
+  margin-right: 0;
 }
 
 .contents-works .item-box .img-link {
