@@ -24,6 +24,10 @@ body.dark .contents-works .img-link img {
   border-color: #555;
 }
 
+body.dark .contents-works .item-box .item-detail .list-detail stack {
+  background-color: #555;
+}
+
 .contents-resume .img-cont,
 .contents-works .img-cont {
   height: 530px;

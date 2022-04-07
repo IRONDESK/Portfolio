@@ -9,7 +9,7 @@ const resumeLink = document.getElementById("link-resume");
 const worksLink = document.getElementById("link-works");
 
 export default function getApp({target}) {
-    if (hash === '') {
+    if (hash === '#' || hash === '') {
         target.innerHTML = Main();
     } else if (hash === '#resume') {
         target.innerHTML = Resume();
@@ -24,7 +24,7 @@ function menuMove() {
     };
 
     indexLink.addEventListener("click", () => {
-        HashRoute("");
+        HashRoute("#");
         App.innerHTML = Main();
     })
     resumeLink.addEventListener("click", () => {
