@@ -1,6 +1,5 @@
 const Resume = () => {
-    return (
-        `
+  return `
     <section class="contents-resume">
         <article class="img-cont"></article>
         <h1 class="title">안녕하세요,<br><strong>개발하는 손수철입니다.</strong></h1>
@@ -59,7 +58,7 @@ const Resume = () => {
                     <i class="lv3">CSS</i>
                     <i class="lv3">SCSS</i>
                     <i class="lv2">JavaScript</i>
-                    <i class="lv1">TypeScript</i>
+                    <i class="lv2">TypeScript</i>
                     <i class="lv2">Python</i>
                 </dd>
                 </dt>
@@ -69,7 +68,8 @@ const Resume = () => {
                 <dd>
                     <i class="lv2">jQuery</i>
                     <i class="lv2">React</i>
-                    <i class="lv2">Node.js</i>
+                    <i class="lv2">Next.js</i>
+                    <i class="lv2">recharts</i>
                 </dd>
                 </dt>
             </dl>
@@ -166,7 +166,6 @@ const Resume = () => {
         </article>
     </section>
     `
-    );
 }
 
-export default Resume;
+export default Resume
