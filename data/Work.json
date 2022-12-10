@@ -1,0 +1,81 @@
+{
+  "data": [
+    {
+      "title": "WF- Which Floor",
+      "team": true,
+      "duration": "2022. 07 - 2022. 09",
+      "member": "Front-End 1명, Back-End 2명",
+      "summary": "가상화폐 모의 거래 및 가격 예측 서비스",
+      "detail": [
+        "페이지 전체 UI, 로고 디자인 기획 및 마크업과 반응형 화면 구현",
+        "차트 라이브러리를 기반으로 실시간 캔들 차트 렌더링 이슈 해결",
+        "Redux와 Cookie로 전역 상태와 JWT를 관리ㄴ"
+      ],
+      "stack": [
+        "Next.js",
+        "CSS(@emotion)",
+        "Redux-Toolkit",
+        "SWR",
+        "React-Hook-Form",
+        "React-Financial-Charts"
+      ],
+      "thumbnail": "./img/thumnail/wf-thumbnail.png"
+    },
+    {
+      "title": "복지편살",
+      "team": true,
+      "github": "https://github.com/IRONDESK/bokjips",
+      "duration": "2022. 05",
+      "member": "Front-End 1명, Back-End 1명",
+      "summary": "기업 복지 정보 제공",
+      "detail": [
+        "페이지 전체 UI 디자인 기획",
+        "Next.js로 서버 사이드 렌더링(SSR) 처리 및 라우팅 개발 효율 향상",
+        "Redux/Jotai를 활용하여 전역 상태 관리"
+      ],
+      "stack": ["Next.js", "CSS(@emotion)", "Jotai", "SWR"],
+      "link": "https://bokjips.vercel.app/",
+      "thumbnail": "https://user-images.githubusercontent.com/87234410/205196696-1f122ce0-1a9e-4325-a55d-741110d93262.png"
+    },
+    {
+      "title": "MOSS 모여라 스터디",
+      "team": true,
+      "github": "https://github.com/IRONDESK/moss",
+      "duration": "2022. 03 - 2022. 05",
+      "member": "Front-End/Back-End 5명",
+      "summary": "스터디 그룹 연결 및 서포트 플랫폼",
+      "detail": [
+        "반응형을 포함한 스터디 페이지 프론트엔드 기능 구현",
+        "d3.js로 벡터 이미지 형식의 과제 달성율 차트 구현",
+        "다양한 Hook과 setTimeout으로 구현한 스터디 타이머",
+        "스터디 그룹 데이터의 Back-End 스키마 모델링"
+      ],
+      "stack": [
+        "Next.js",
+        "CSS(@emotion)",
+        "TypeScript",
+        "d3.js",
+        "Prisma",
+        "PlanetScale"
+      ],
+      "link": "https://github.com/IRONDESK/moss",
+      "thumbnail": "./img/thumnail/9.jpg"
+    },
+    {
+      "title": "가수 팬심 테스트",
+      "team": true,
+      "github": "https://github.com/OhRaeKyu/music-quiz",
+      "duration": "2022. 02",
+      "member": "Front-End 2명",
+      "summary": "가수의 앨범 및 노래 테스트 제공 서비스",
+      "detail": [
+        "스포티파이 API를 활용한 트렌드성 테스트 서비스 구현",
+        "다양한 Hook과 React Player 모듈 등을 활용한 퀴즈 자동 생성",
+        "카카오 API를 활용한 공유하기 서비스 제공"
+      ],
+      "stack": ["HTML", "CSS(Styled Component)", "TypeScript", "React"],
+      "link": "https://music-quizz.vercel.app/",
+      "thumbnail": "./img/thumnail/8.jpg"
+    }
+  ]
+}

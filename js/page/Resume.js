@@ -2,18 +2,19 @@ const Resume = () => {
   return `
     <section class="contents-resume">
         <article class="img-cont"></article>
-        <h1 class="title">안녕하세요,<br><strong>개발하는 손수철입니다.</strong></h1>
+        <h1 class="title">Prism Developer<br><strong>안녕하세요 손수철입니다.</strong></h1>
 
         <article class="introduce">
             <h2 class="sub-title">INTRODUCE</h2>
             <p class="sub-text">
                 <span>
                     <strong>많은 것을 해왔지만 허투루 하지 않았습니다.</strong><br>
-                    경제학을 전공하고 광고와 마케팅, 디자인에 치열하게 몰입해왔습니다.<br>
-                    해당 분야에서 경험을 쌓으면서 '이미 만들어진 것'을 다루는 것이 아닌, 직접 서비스를 기획하고 개발하는 '만드는 일'에 기여하고 싶은 목표가
-                    생겼습니다.<br><br>
-                    제가 경험한 분야와 Front-End 개발자는 '고객의 문제를 해결한다'는 가치를 중점에 둔다는 점에서 다르지 않다고 생각합니다.<br>
-                    다양한 분야에서의 경험을 바탕으로 기획자와 디자이너 등 실무진과의 협업의 밀도를 높이고 서비스 향상을 위해 깊게 몰두할 개발자임을 자부합니다.
+                    경제학을 전공하고 광고와 마케팅, 디자인에 치열하게 몰입했었습니다. <br>
+                    해당 분야에서 경험을 쌓다가 프로덕트 홍보가 아닌, 프로덕트를 직접 기획하거나 개발하는 일에 기여하고 싶은 목표가 생겼습니다.<br>프론트엔드 개발자로 성장하기 위한 과정은 누구 못지 않게 치열하게 몰입했고, 스스로 설정한 목표를 달성하고 업무에 기여할 수 있는 개발자가 되기 위해 노력해왔습니다.
+                    <br><br>
+특히 주니어 개발자로서 제 자신을 ‘끊임없이 준비하는 사람’으로 정의하고, 부지런히 여러 프로젝트를 만들면서 역량의 공백을 만들지 않고자 했습니다. <br>
+프론트엔드 교육을 수료한 이후에도 매월마다 반드시 적어도 1개의 개인 혹은 새로운 사람들과의 팀 프로젝트를 구성했습니다. <br>
+호기심을 갖고 새로운 프레임워크나 라이브러리르 도입하는 것을 즐겼고, 코드와 커밋 컨벤션을 정하고 브랜치를 나누는 등 협업을 위한 형상 관리 방법에 최대한 익숙해지고자 했습니다.
                 </span>
             </p>
         </article>
@@ -24,9 +25,7 @@ const Resume = () => {
                 <dt>Birth
                 <dd class="large-width">1995. 7. 5.</dd>
                 </dt>
-                <dt>Phone
-                <dd>+82 10 5199 2429</dd>
-                </dt>
+
                 <dt>Place
                 <dd>Gimpo city, South Korea</dd>
                 </dt>
@@ -67,9 +66,9 @@ const Resume = () => {
                 <dt>Framework\Library
                 <dd>
                     <i class="lv2">jQuery</i>
-                    <i class="lv2">React</i>
-                    <i class="lv2">Next.js</i>
-                    <i class="lv2">recharts</i>
+                    <i class="lv3">React</i>
+                    <i class="lv3">Next.js</i>
+                    <i class="lv2">Redux</i>
                 </dd>
                 </dt>
             </dl>
@@ -156,16 +155,9 @@ const Resume = () => {
                 </li>
                 <li class="list-detail">Intermediate Middle 2</li>
             </ul>
-            <ul class="sub-text experience">
-                <li class="list-title">
-                    <strong>자동차운전면허증</strong>
-                    <span class="exp-date">2014.03</span>
-                </li>
-                <li class="list-detail">2종 보통</li>
-            </ul>
         </article>
     </section>
-    `
-}
+    `;
+};
 
-export default Resume
+export default Resume;

@@ -2,7 +2,7 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
 @import url("https://fonts.googleapis.com/css2?family=Archivo:wght@300;500;700;800;900&display=swap");
 * {
-  font-family: 'Archivo', 'Pretendard';
+  font-family: "Archivo", "Pretendard";
 }
 
 a {
@@ -16,7 +16,6 @@ body {
   overflow: scroll;
   -ms-overflow-style: none;
 }
-
 body::-webkit-scrollbar {
   display: none;
   width: 0 !important;
@@ -27,19 +26,15 @@ body.dark {
   background-color: #111;
   color: #fff;
 }
-
 body.dark #dark-btn i {
   color: #fff;
 }
-
 body.dark #dark-btn i:hover {
   color: #ff5303;
 }
-
 body.dark .menu-cont:hover {
   color: #555;
 }
-
 body.dark .menu-cont li:hover {
   color: #fff;
 }
@@ -57,104 +52,71 @@ body.dark .menu-cont li:hover {
 
 /* header */
 header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
   padding: 30px 13%;
 }
-
 header h1 {
   cursor: pointer;
   width: 240px;
-  font-family: 'Archivo';
+  font-family: "Archivo";
   font-size: 45px;
   font-weight: 900;
   line-height: 34px;
   letter-spacing: -2px;
 }
-
 header h1 .hover {
   display: none;
 }
-
 header h1:hover .show {
   display: none;
 }
-
 header h1:hover .hover {
   display: inline;
   color: #ff5303;
 }
-
 header .menu-cont {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
   text-align: right;
-  font-family: 'Archivo';
+  font-family: "Archivo";
   font-weight: 500;
   letter-spacing: -0.5px;
 }
-
 header .menu-cont:hover {
   color: #afafaf;
 }
-
 header .menu-cont #dark-btn {
   width: 30px;
   color: #000;
 }
-
 header .menu-cont #dark-btn:hover {
   color: #ff5303;
 }
-
 header .menu-cont #dark-btn i {
   cursor: pointer;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
-
 header .menu-cont li {
   margin-top: 9px;
 }
-
 header .menu-cont li a {
   cursor: pointer;
 }
-
 header .menu-cont li:hover {
   position: relative;
   color: #000;
   font-weight: 800;
 }
-
 header .menu-cont .menu-title:hover::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
-  -webkit-transform: translate(4px, -50%);
-          transform: translate(4px, -50%);
+  transform: translate(4px, -50%);
   width: 6px;
   height: 6px;
   border-radius: 100%;
@@ -173,18 +135,15 @@ main {
     padding-right: 10%;
   }
 }
-
 @media screen and (max-width: 1280px) {
   header, main {
     padding-left: 7%;
     padding-right: 7%;
   }
 }
-
 @media screen and (max-width: 640px) {
   header, main {
     padding-left: 4%;
     padding-right: 4%;
   }
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
