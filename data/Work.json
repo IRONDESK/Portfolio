@@ -34,7 +34,7 @@
         "Redux/Jotai를 활용하여 전역 상태 관리"
       ],
       "stack": ["Next.js", "CSS(@emotion)", "Jotai", "SWR"],
-      "link": "https://bokjips.vercel.app/",
+      "link": "https://bokjips.com/",
       "thumbnail": "https://user-images.githubusercontent.com/87234410/205196696-1f122ce0-1a9e-4325-a55d-741110d93262.png"
     },
     {
